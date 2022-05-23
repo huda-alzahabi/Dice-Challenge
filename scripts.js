@@ -9,8 +9,11 @@ function roll_dice() {
 }
 
 function start_game() {
+    //gets the images by their class name
     var d1 = document.getElementsByClassName("img1");
     var d2 = document.getElementsByClassName("img2");
+
+    //rolls dice to generate random integers and present the images accordingly
     roll_dice();
     d1[0].src = "images/dice" + random + ".png";
     var r1 = random;
@@ -18,6 +21,7 @@ function start_game() {
     d2[0].src = "images/dice" + random + ".png";
     var r2 = random;
 
+    //checking the conditions for winning
     if (r1 > r2)
         document.getElementById("result").innerHTML = "&#128681 Play 1 Wins!";
     else if (r1 < r2)
