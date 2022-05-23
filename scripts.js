@@ -18,8 +18,9 @@ function start_game() {
     d2[0].src = "images/dice" + random + ".png";
     var r2 = random;
 
-    if (r1 > r2) document.getElementById("result").innerHTML = "Player1 Wins";
+    if (r1 > r2)
+        document.getElementById("result").innerHTML = "&#128681 Play 1 Wins!";
     else if (r1 < r2)
-        document.getElementById("result").innerHTML = "Player2 Wins";
-    else document.getElementById("result").innerHTML = "Draw";
+        document.getElementById("result").innerHTML = "&#128681 Play 2 Wins!";
+    else document.getElementById("result").innerHTML = "Draw!";
 }
